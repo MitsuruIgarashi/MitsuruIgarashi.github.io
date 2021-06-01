@@ -254,11 +254,6 @@
                             
                                 <!-- 当前仅支持waline自带的统计功能 -->
                                 
-                                    <a>
-                                        <i class="fa fa-commenting-o"></i>
-                                        <span data-xid="/2021/06/01/%E3%81%95%E3%82%89%E3%81%B0%E3%80%81%E5%83%95%E3%81%AE%E5%A4%8F%E8%89%B2%E7%89%A9%E8%AA%9E/" class="waline-comment-count"> </span> 条评论
-                                    </a>
-                                
                             
                         </span>
                         <span class="pull-right">
@@ -323,11 +318,6 @@
                             
                             
                                 <!-- 当前仅支持waline自带的统计功能 -->
-                                
-                                    <a>
-                                        <i class="fa fa-commenting-o"></i>
-                                        <span data-xid="/2021/05/31/%E7%94%9F%E3%81%BE%E3%82%8C%E6%9D%A5%E3%82%8B%E5%AD%90%E4%BE%9B%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AB/" class="waline-comment-count"> </span> 条评论
-                                    </a>
                                 
                             
                         </span>
@@ -395,11 +385,6 @@
                             
                                 <!-- 当前仅支持waline自带的统计功能 -->
                                 
-                                    <a>
-                                        <i class="fa fa-commenting-o"></i>
-                                        <span data-xid="/2021/05/31/%E6%81%8B%C3%97%E3%82%B7%E3%83%B3%E3%82%A2%E3%82%A4%E5%BD%BC%E5%A5%B3-TE%E5%90%8E%E6%89%80%E6%83%B3/" class="waline-comment-count"> </span> 条评论
-                                    </a>
-                                
                             
                         </span>
                         <span class="pull-right">
@@ -418,24 +403,28 @@
     <div class="hidden">
         <!-- 加载文章阅读对应的统计功能，评论自带的那种 -->
         
-            <div id="w-comments" class="post-comments"></div>
+            <div id="v-comments" class="post-comments"></div>
 <script>
     var load_comm = () => {
         const init = () => {
-            new Waline(Object.assign({
-                el: '#w-comments',
+            new Valine({
+                el: '#v-comments',
+                appId: u5ri3jjiiwfeTOdYXPo4gj8b-gzGzoHsz
+                appKey: IwlVxAf6hmPV5Whc9NMThjoO
+                visitor: true
+                enableQQ: true
                 path: '/index.html'
-            }, JSON.parse('{"serverURL":null,"visitor":true}')));
+            });
         }
-        if (typeof Waline == 'undefined') {
-            const src = 'https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js';
+        if (typeof Valine == 'undefined') {
+            const src = 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js';
             $.getScript(src, init);
         } else {
             init();
         }
     };
 </script>
-<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://waline.js.org/">comments powered by Waline.</a></noscript>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://valine.js.org/">comments powered by Valine.</a></noscript>
 
         
     </div>

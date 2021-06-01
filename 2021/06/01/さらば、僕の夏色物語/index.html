@@ -24,7 +24,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/logo.png">
 <meta property="article:published_time" content="2021-06-01T02:23:02.000Z">
-<meta property="article:modified_time" content="2021-06-01T04:25:20.329Z">
+<meta property="article:modified_time" content="2021-06-01T04:30:18.594Z">
 <meta property="article:author" content="@Mitsuru_Igarashi">
 <meta property="article:tag" content="醒着做梦">
 <meta name="twitter:card" content="summary">
@@ -239,17 +239,12 @@
                             <span class="leancloud-visitors-count"> </span> 次阅读
                         </li>
                         
-                            <li>
-                                <i class="fa fa-commenting-o"></i>
-                                <span data-xid="/2021/06/01/%E3%81%95%E3%82%89%E3%81%B0%E3%80%81%E5%83%95%E3%81%AE%E5%A4%8F%E8%89%B2%E7%89%A9%E8%AA%9E/" class="waline-comment-count"> </span> 条评论
-                            </li>
-                        
                     
                 </ul>
             </header>
             <div class="kratos-post-content">
                 <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                    本文最后编辑于 <time datetime="1622521520329"></time> 前，其中的内容可能需要更新。
+                    本文最后编辑于 <time datetime="1622521818594"></time> 前，其中的内容可能需要更新。
                 </div>
                 
                     <div class="kratos-post-inner-toc">
@@ -426,24 +421,28 @@
             </nav>
         
         
-            <div id="w-comments" class="post-comments"></div>
+            <div id="v-comments" class="post-comments"></div>
 <script>
     var load_comm = () => {
         const init = () => {
-            new Waline(Object.assign({
-                el: '#w-comments',
+            new Valine({
+                el: '#v-comments',
+                appId: u5ri3jjiiwfeTOdYXPo4gj8b-gzGzoHsz
+                appKey: IwlVxAf6hmPV5Whc9NMThjoO
+                visitor: true
+                enableQQ: true
                 path: '/2021/06/01/%E3%81%95%E3%82%89%E3%81%B0%E3%80%81%E5%83%95%E3%81%AE%E5%A4%8F%E8%89%B2%E7%89%A9%E8%AA%9E/'
-            }, JSON.parse('{"serverURL":null,"visitor":true}')));
+            });
         }
-        if (typeof Waline == 'undefined') {
-            const src = 'https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js';
+        if (typeof Valine == 'undefined') {
+            const src = 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js';
             $.getScript(src, init);
         } else {
             init();
         }
     };
 </script>
-<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://waline.js.org/">comments powered by Waline.</a></noscript>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://valine.js.org/">comments powered by Valine.</a></noscript>
 
         
     </article>
