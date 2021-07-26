@@ -145,7 +145,43 @@
             <div class="container">
                 <div id="main" class="row">
                     
-                        
+
+        <section class="col-md-8">
+    <article>
+        <div class="kratos-hentry kratos-post-inner clearfix">
+            <div class="kratos-post-content">
+                <h2 class="title-h2 text-center">好伙伴们</h2>
+                <div class="linkpage">
+    <ul id="friendsList"></ul>
+</div>
+
+<script type="text/javascript">
+{
+    const flist = JSON.parse(`[{"name":"Yang","bio":"好耶~","avatar":"../images/avatar.jpg","link":"https://caoyangim.github.io/"}]`);
+    let friendNodes = '';
+    while (flist.length > 0) {
+        const rndNum = Math.floor(Math.random()*flist.length);
+        friendNodes += `<li><a target="_blank" href="${flist[rndNum].link}"><img src="${flist[rndNum].avatar}"><h4>${flist[rndNum].name}</h4><p>${flist[rndNum].bio}</p></a></li>`;
+        flist.splice(rndNum, 1);
+    }
+    document.getElementById("friendsList").innerHTML = friendNodes;
+}
+</script>
+            </div>
+            <footer class="kratos-entry-footer clearfix">
+                <div class="footer-tag clearfix">
+                    <div class="pull-date">
+                    <span>最后编辑：2021-01-18</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+    </article>
+</section>
+
+                
+            
 
 <section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
     <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
@@ -226,43 +262,7 @@
             
     </div>
 </section>
-                    
-
-        <section class="col-md-8">
-    <article>
-        <div class="kratos-hentry kratos-post-inner clearfix">
-            <div class="kratos-post-content">
-                <h2 class="title-h2 text-center">好伙伴们</h2>
-                <div class="linkpage">
-    <ul id="friendsList"></ul>
-</div>
-
-<script type="text/javascript">
-{
-    const flist = JSON.parse(`[{"name":"Yang","bio":"好耶~","avatar":"../images/avatar.jpg","link":"https://caoyangim.github.io/"}]`);
-    let friendNodes = '';
-    while (flist.length > 0) {
-        const rndNum = Math.floor(Math.random()*flist.length);
-        friendNodes += `<li><a target="_blank" href="${flist[rndNum].link}"><img src="${flist[rndNum].avatar}"><h4>${flist[rndNum].name}</h4><p>${flist[rndNum].bio}</p></a></li>`;
-        flist.splice(rndNum, 1);
-    }
-    document.getElementById("friendsList").innerHTML = friendNodes;
-}
-</script>
-            </div>
-            <footer class="kratos-entry-footer clearfix">
-                <div class="footer-tag clearfix">
-                    <div class="pull-date">
-                    <span>最后编辑：2021-01-18</span>
-                    </div>
-                </div>
-            </footer>
-        </div>
         
-    </article>
-</section>
-
-                
         </div>
     </div>
 </div>
@@ -340,7 +340,7 @@
     <meting-js
         server="netease"
         type="playlist"
-        id="405964106"
+        id="405924141"
         order="random"
         fixed="true"
     >
